@@ -1,0 +1,832 @@
+*
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+*{
+    box-sizing: border-box;
+}
+
+@media  screen and (width:390px) 
+{
+    
+}
+
+/* log-in from CSS*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .cont {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+     background-image: url(image/bg2.webp);
+   
+    padding-top: 15px;
+    background-color: #f2f2f2;
+    padding: 0px 15px 10px 15px;
+    border: 2px solid lightgray;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 15px 5px black;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+
+.zoom {
+    border-radius: 50%;
+    padding: 50px;
+    transition: transform .2s; /* Animation */
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+  .gradient-text {
+    /* Fallback: Set a background color. */
+    background-color: red;
+    
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #000000, #7c6913);
+    
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  .image{
+    background-image: url('image/bg2.webp');
+    height: auto;
+    width: auto;
+  }
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+.parallax {
+    /* The image used */
+    background-image: url('image/slider2.jpg');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
+  .container{
+    background-image: url(image/bg2.webp);
+   
+    padding-top: 15px;
+    background-color: #f2f2f2;
+    padding: 0px 15px 10px 15px;
+    border: 2px solid lightgray;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 15px 5px black;
+}
+
+/* CSS */
+.pics {
+    width: 30rem;
+    height: 30rem;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+.pics:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.first-minor_5 
+{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    justify-content: space-evenly;
+    size: 30px;
+}
+img 
+{
+
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.hr
+{
+    border: 2px solid #000000;
+    background-color: #000000;
+    width: 100%;
+    
+    
+}
+.first-minor hr
+ {
+    border: 2px solid #ffd53d;
+    background-color: #ffd53d;
+    width: 10rem;
+}
+.first-minor_2 {
+    font-family: "Lato", sans-serif;
+    padding: 1rem 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-style: bold;
+    color: #232323;
+    padding: 0 4rem;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-size: large;
+}
+.first-minor_3
+{
+    padding: 1rem 4rem;
+    font-weight: 300;
+}
+.first-minor
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+.first-minor_1 {
+    background: linear-gradient(to bottom, #ffffff 50%, #5183b8 50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem;
+}
+.major {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.content-head 
+{
+    padding: 0rem 7rem;
+    padding-bottom: 3rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #4c4c4c;
+    text-align: left;
+    font-size: larger;
+}
+.home {
+    padding-right: 0.4rem;
+    font-weight: bold;
+}
+.home_sub_1 {
+    padding-left: 0.4rem;
+}
+.tips {
+  height: auto;
+    text-align: left;
+    padding: 3rem 7rem;
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    color: #333333;
+    line-height: 1.5;
+    font-size: large;
+}
+.sampoorna{
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 3rem;
+}
+    .jumbo-box {
+        
+        color: #ffffff;
+        background: linear-gradient( 180deg, rgba(0, 103, 179, 0.8) 0.52%, #5183b8 17.71%, #5183b8 55.73% );
+        font-family: "Lato", sans-serif;
+        width: 100%;
+        padding: 40px 7rem;
+        height: 17rem , auto;
+    }
+
+
+ .mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+
+.slideshow-container {
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px 5px gray;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev{
+    left: 0;
+    border-radius: 3px 0 0 3px ;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover
+ {
+    background-color: rgba(0,0,0,0.8);
+  }
+ 
+  /* Number text (1/3 etc) */
+.numbertext
+ {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  h1{
+    text-align: center;
+    padding: 2px;
+  }
+/* The dots/bullets/indicators */
+.dot 
+{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 10s;
+  }
+  @keyframes fade {
+    from {opacity: 1} 
+    to {opacity: 1}
+  }
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px)
+ {
+    .prev, .next,.text {font-size: 11px}
+  }
+  .slider{
+    box-shadow: 5px 5px 15px 5px #333;
+    width: 800vh;
+    height: 400vh;
+    background-image: url(image/i1.jpg);
+    background-repeat: no-repeat;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 10ex;
+    animation: slide 20s infinite;
+    background-size: cover;
+    image-resolution: 100;
+    margin-top: auto;
+    margin-bottom: auto;
+    behavior: unset;
+}
+@keyframes slide {
+    25%{
+        background: url(image/i2.jpg);
+    }
+    50%{
+        background: url(image/i3.jpg);
+    }
+    75%{
+        background: url(image/i4.jpg);
+    }
+    100%{
+        background: url(image/slider2.jpg);
+    }
+    
+}
+.center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;box-shadow: 5px 5px 15px 5px gray;
+
+}
+.club h1{
+    font-size: 40px;
+    font: bold;
+    font-style: italic;
+
+}
+.club
+{   
+    display: block;
+    overflow: hidden;
+    font-size: 30px;
+    font-family: sans-serif;
+    width: 100%;
+    height: auto;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.ayush
+{
+    float: left;
+}
+.events{
+    margin-top: 10;
+    margin-bottom: 10;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 2px;
+
+    border-collapse: collapse;
+    text-align:center;
+    font-size: 20px;
+}
+
+.yamini{
+    background-size: 100% auto;
+    background-image: linear-gradient(to right,#2A2A72 , #647DEE);
+    border: 5px solid black;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+.social-links{
+
+    display: flex;
+}
+
+.social-links a
+{
+    width: 80px;
+    height: 80px  ;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    margin: 0 30px;
+    border-radius: 50% ;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+.social-links a .fa-brands
+  {
+    font-size: 30px ;
+    line-height: 80px ;
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+.social-links a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg, #ed1c94, #ffec17);
+    position: absolute;
+    transition: 0.5s;
+}
+.social-links a:hover::after{
+    top: 0;
+}
+.social-links a:hover .fa-brands
+{
+    color: white;
+}
+.social-links a:hover{
+    transform: translateY(-10px);
+}
+.hero{
+    background-image: url(image/bg2.webp);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+h5{
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+}
+
+h3
+{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+body
+{
+    overflow-x: hidden;
+    background-position: center center;
+    height: auto;
+    width: auto;
+    grid-area: auto;
+  
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header img
+{
+    padding: 0vw;
+    align-items: center;
+    padding-top: 0vw;
+    padding-inline-start: 0vw;
+}
+header h1 
+{ 
+    
+    text-align: left;
+    font-size: 40px;
+    color: black;
+    font-style: italic;
+  
+}
+header h5
+{
+    text-align: left;
+    color: black
+}
+
+header 
+{
+    
+    background-position: 100vw;
+    height: auto;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    background-attachment: fixed;
+    background-size: auto;
+   
+}
+@media only screen and (width: 415px){
+    .social-links
+    {
+      width:150px;
+      margin-left: 7px;
+    }
+    .navbar-two 
+    {
+    padding:0px 0px;
+    color:red;
+    }
+}
+@media (min-width: 1200px) {
+    header h5 , header, header h1 {
+      font-size: 40px;
+      display: block;
+    }
+  }
+  /* If the screen size is smaller than 1200px, set the font-size to 80px */
+  @media (max-width: 1199.98px)
+  {
+    header h5 , header, .table,  header h1 
+    {
+      font-size: 30px;
+      display: block;
+    }
+  }
+
+table, th, td
+ {
+    background-image: url(image/bg2.webp);
+    overflow-x: auto;
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
+    align-items: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align:center;
+    font-size: 20px;
+  }
+  
+  
+  @media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table , .hero {
+        display: flex;
+        flex-wrap: inherit;
+         
+    }
+    
+	}
+    @media only screen and (max-width:560px), (min-device-width:568px) and (max-device-width:1024px)
+    {
+        #form1{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            overflow: hidden;
+        }
+        .hero,.social-links, .social-links a .fa-brands {
+            height: auto;
+            display: flex;
+            flex-direction: column
+        }
+        .major {
+            height: auto;
+            display: flex;
+            flex-direction: column
+        }
+        header img{
+            width: min(50vw, 200px);
+            height: auto;
+            display: flex;
+        }
+        
+    }
+th, td
+ {
+    align-items: center;
+    font: 30px;
+    padding: 20px;
+    text-align: center;  
+    font-family: Arial, Helvetica, sans-serif;  
+ }
+nav 
+ {
+    height: auto;
+    width: 100vw;
+    background-color: #333;
+    overflow: hidden; 
+    min-width: 600px auto;
+    display: flex;
+    align-items: center;
+    margin: 0vw auto;
+
+}
+nav  a{
+
+    position: relative;
+    text-decoration: none;
+    font-family: 'poppins',sans-serif;
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+ nav a:after
+ {
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 10px;
+    transition: 0.3s;
+}
+nav a:hover
+{
+    color: #fff;
+}
+nav a:hover:after{
+    width: 100%;
+}
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+.table{
+    height: auto;
+    width: 100vw;
+}
+main {
+    background-image: url(image/bg2.webp);
+    text-align: center;
+}
+.events
+{
+    background-image: url(image/bg2.webp);
+}
+.club{
+    background-image: url(image/bg2.webp);
+}
+#about{
+    background-image: url(image/bg2.webp);
+}
+h2 {
+    padding: 20px;
+}
+
+section:nth-child(even) {
+    background-color: rgb(241, 241, 241);
+}
+
+section
+{
+    min-height: 100vh;
+}
+
+video {
+    box-shadow: 5px 5px 15px 5px #333;
+    width: 800px;
+    height: 400px;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 10ex;
+    padding: 10px;
+}
+
+iframe {
+    height: 75vh;
+}
+
+img {
+    padding: 10px;
+}
+
+section h5 {
+    margin: 40px;
+}
+
+footer {
+    background-color: #333;
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+footer h4
+{
+   
+    padding: 20px;
+    text-align: center;
+    color: aliceblue;
+}
